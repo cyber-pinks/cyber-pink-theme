@@ -65,7 +65,7 @@ However, if you package (build) the repository by running the `npx @vscode/vsce 
 ### Local Install
 
 1. Copy or clone this folder into your VS Code extensions directory:
-   -**Windows**: `%USERPROFILE%\.vscode\extensions\`
+   -**Windows**: `%USERPROFILE%/.vscode/extensions/`
    -**macOS/Linux**: `~/.vscode/extensions/`
 2. Restart VS Code.
 3. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run:
