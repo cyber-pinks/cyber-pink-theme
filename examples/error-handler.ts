@@ -1,3 +1,9 @@
+/*
+Copyright (c) 2026 1abcdefggs (takaer)
+Licensed under the MIT License
+See LICENSE file in the project root for full license information
+*/
+
 // Custom Error Handler — Syntax Highlighting Demo
 
 type ErrorLevel = "fatal" | "warning" | "info";

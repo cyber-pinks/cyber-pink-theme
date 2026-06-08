@@ -1,20 +1,27 @@
 {
   "name": "cyber-pink-theme",
-  "displayName": "Cyber Pink",
-  "description": "Dark cyber theme with neon pink accents",
-  "version": "0.2.1",
-  "publisher": "1abcdefggs",
+  "displayName": "Cyber Pink Color Theme",
+  "description": "💗 Pink & 💙 cyan / cyberpunk / neon glow / dark color theme for VS Code — futuristic contrast and bold style.",
+  "version": "0.3.0",
+  "publisher": "cyber-pinks",
   "license": "MIT",
-  "keywords": ["theme", "dark", "cyber", "pink"],
+  "keywords": ["theme","color theme","dark theme","cyber","cyber pink","cyberpunk","neon","pink","cyan","black"],
+  "devDependencies": {
+    "sharp": "^0.33.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/1abcdefggs/cyber-pink-theme.git"
+    "url": "https://github.com/cyber-pinks/cyber-pink-theme"
   },
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": ["Themes"],
   "main": "./extension.js",
+  "scripts": {
+    "resize-images": "node scripts/resize-images.mjs",
+    "resize-promo": "node img-compressor/scripts/pipeline/step5-resize-promo-images.mjs"
+  },
   "activationEvents": [
     "onStartupFinished",
     "onCommand:cyberPink.editThemeColorAtCursor",
@@ -23,28 +30,28 @@
   "contributes": {
     "themes": [
       {
-        "label": "💗 CYBER PINK — Pink",
+        "label": "💗 CYBER PINK — Pink Neon",
         "uiTheme": "vs-dark",
-        "path": "./themes/cyber-pink-pink-theme.json",
-        "description": "Pink accent. Base Pure Black | Deep Blue-Black | Midnight Navy | Surface Dark Slate"
+        "path": "./themes/cyber-pink-pink-neon.json",
+        "description": "Pink Neon accent. Pure black base with cyberpunk glow."
       },
       {
         "label": "🌸 CYBER PINK — Pink Soft",
         "uiTheme": "vs-dark",
-        "path": "./themes/cyber-pink-pink-soft-theme.json",
-        "description": "Muted pink accent. Softer glow for extended sessions"
+        "path": "./themes/cyber-pink-pink-soft.json",
+        "description": "Pink Soft accent. Muted glow for extended sessions."
       },
       {
-        "label": "💙 CYBER PINK — Cyan",
+        "label": "💙 CYBER PINK — Cyan Neon",
         "uiTheme": "vs-dark",
-        "path": "./themes/cyber-pink-cyan-theme.json",
-        "description": "Cyan accent. Base Pure Black | Deep Blue-Black | Midnight Navy | Surface Dark Slate"
+        "path": "./themes/cyber-pink-cyan-neon.json",
+        "description": "Cyan Neon accent. Pure black base with cyberpunk glow."
       },
       {
         "label": "🫧 CYBER PINK — Cyan Soft",
         "uiTheme": "vs-dark",
-        "path": "./themes/cyber-pink-cyan-soft-theme.json",
-        "description": "Muted cyan accent. Softer glow for extended sessions"
+        "path": "./themes/cyber-pink-cyan-soft.json",
+        "description": "Cyan Soft accent. Muted glow for extended sessions."
       }
     ],
     "commands": [
@@ -90,30 +97,42 @@
           "default": "#111320",
           "description": "Surface background color (widgets, inputs)"
         },
-        "cyberPink.accent.preset": {
+              "cyberPink.accent.preset": {
           "type": "string",
-          "default": "pink",
-          "enum": ["pink", "cyan", "green", "amber", "fuchsia", "blue", "custom"],
+          "enum": [
+            "pinkNeon",
+            "pinkSoft",
+            "cyanNeon",
+            "cyanSoft",
+            "greenNeon",
+            "amberNeon",
+            "fuchsiaNeon",
+            "blueNeon",
+            "custom"
+          ],
           "enumDescriptions": [
-            "Pink Storm (#FF3399) - default",
-            "Cyan Wave (#00f0ff)",
-            "Neon Lime (#5AFF19)",
-            "Warning Amber (#FFC800)",
-            "Psycho Fuchsia (#CC1669)",
-            "Circuit Blue (#00AEEF)",
+            "Pink Neon (#FF3399) - default",
+            "Pink Soft (#D92B82)",
+            "Cyan Neon (#00F0FF)",
+            "Cyan Soft (#00CCD9)",
+            "Green Neon (#5AFF19)",
+            "Amber Neon (#FFC800)",
+            "Fuchsia Neon (#CC1669)",
+            "Blue Neon (#00AEEF)",
             "Use custom accent color"
           ],
+          "default": "pinkNeon",
           "description": "Accent color preset for the theme"
         },
         "cyberPink.accent.customColor": {
           "type": "string",
-          "default": "#FF3399",
-          "description": "Custom accent color (used when preset is 'custom')"
+          "default": "#FFFFFF",
+          "description": "Custom accent color (default is white #FFFFFF for easy visibility when using the 'custom' preset)"
         },
         "cyberPink.accent.customHover": {
           "type": "string",
-          "default": "#CC297A",
-          "description": "Custom accent hover color (used when preset is 'custom')"
+          "default": "#CCCCCC",
+          "description": "Custom accent hover color (default is light gray #CCCCCC so beginners can clearly see the hover effect when using the 'custom' preset)"
         }
       }
     }

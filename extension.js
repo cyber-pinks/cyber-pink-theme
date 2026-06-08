@@ -2,7 +2,7 @@ const vscode = require('vscode');
 const fs = require('fs').promises;
 const path = require('path');
 
-// Copyright (c) 2026　1abcdefggs
+// Copyright (c) 2026　1abcdefggs (takaer)
 // Licensed under the MIT License
 // See LICENSE file in the project root for full license information
 
@@ -95,13 +95,17 @@ function inferTokenType(doc, pos) {
  * Accent color presets with base and hover colors.
  */
 const PRESET_MAP = {
-  pink:    { base: '#FF3399', hover: '#CC297A' },
-  cyan:    { base: '#00f0ff', hover: '#00c3cc' },
-  green:   { base: '#5AFF19', hover: '#3DCC12' },
-  amber:   { base: '#FFC800', hover: '#CC9F00' },
-  fuchsia: { base: '#CC1669', hover: '#990F4E' },
-  blue:    { base: '#00AEEF', hover: '#008BBF' }
+  pinkNeon:    { base: '#FF3399', hover: '#CC297A' },
+  pinkSoft:    { base: '#D92B82', hover: '#AD2368' },
+  cyanNeon:    { base: '#00F0FF', hover: '#00C3CC' },
+  cyanSoft:    { base: '#00CCD9', hover: '#00A6AD' },
+
+  greenNeon:   { base: '#5AFF19', hover: '#3DCC12' },
+  amberNeon:   { base: '#FFC800', hover: '#CC9F00' },
+  fuchsiaNeon: { base: '#CC1669', hover: '#990F4E' },
+  blueNeon:    { base: '#00AEEF', hover: '#008BBF' }
 };
+
 
 /**
  * Apply the selected accent preset to the theme JSON.
@@ -282,100 +286,140 @@ async function updateThemeColor(themePath, category, newColor) {
 }
 
 /**
+ * Detect the currently active Cyber Pink theme and return its JSON path.
+ */
+function getActiveCyberPinkThemePath(context) {
+  const activeTheme = vscode.window.activeColorTheme;
+
+  if (!activeTheme || !activeTheme.label) {
+    vscode.window.showWarningMessage('Could not detect active theme.');
+    return null;
+  }
+
+  const label = activeTheme.label.toLowerCase();
+  let fileName = null;
+
+  if (label.includes('pink') && label.includes('neon')) {
+    fileName = 'cyber-pink-pink-neon.json';
+  } else if (label.includes('pink') && label.includes('soft')) {
+    fileName = 'cyber-pink-pink-soft.json';
+  } else if (label.includes('cyan') && label.includes('neon')) {
+    fileName = 'cyber-pink-cyan-neon.json';
+  } else if (label.includes('cyan') && label.includes('soft')) {
+    fileName = 'cyber-pink-cyan-soft.json';
+  } else {
+    vscode.window.showWarningMessage(
+      `Active theme "${activeTheme.label}" is not a Cyber Pink theme.`
+    );
+    return null;
+  }
+
+  return path.join(context.extensionPath, 'themes', fileName);
+}
+
+
+/**
  * Activate the extension and register commands.
- * @param {vscode.ExtensionContext} context
  */
 async function activate(context) {
-  const cmd = vscode.commands.registerCommand(
-    'cyberPink.editThemeColorAtCursor',
-    async () => {
-      const editor = vscode.window.activeTextEditor;
-      if (!editor) {
-        vscode.window.showWarningMessage('No active editor');
-        return;
-      }
 
-      const doc = editor.document;
-      const pos = editor.selection.active;
-      const category = inferTokenType(doc, pos);
-
-      const themePath = path.join(
-        context.extensionPath,
-        'themes',
-        'cyber-pink-pink-theme.json'
-      );
-
-      let currentColor = '#ffffff';
-      try {
-        const raw = await fs.readFile(themePath, 'utf8');
-        const theme = JSON.parse(raw);
-        const scopes = SCOPE_MAP[category] || SCOPE_MAP.variable;
-        const existing = theme.tokenColors.find(item => {
-          const itemScopes = Array.isArray(item.scope) ? item.scope : [item.scope];
-          return itemScopes.some(s => scopes.includes(s));
-        });
-        currentColor = existing ? existing.settings.foreground : '#ffffff';
-      } catch (err) {
-        // If reading fails, fall back to default color silently
-        currentColor = '#ffffff';
-      }
-
-      const newColor = await vscode.window.showInputBox({
-        prompt: `Edit "${category}" theme color (hex)`,
-        value: currentColor,
-        validateInput: value => {
-          return /^#([0-9A-Fa-f]{3,4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$/i.test(value)
-            ? null
-            : 'Enter a valid hex color (e.g. #00f0ff)';
-        }
-      });
-
-      if (!newColor) return;
-
-      try {
-        await updateThemeColor(themePath, category, newColor);
-      } catch {
-        // Error already shown inside updateThemeColor; abort here
-        return;
-      }
-
-      const reload = await vscode.window.showInformationMessage(
-        `Updated "${category}" to ${newColor}. Reload to apply?`,
-        'Reload'
-      );
-      if (reload === 'Reload') {
-        vscode.commands.executeCommand('workbench.action.reloadWindow');
-      }
+const cmd = vscode.commands.registerCommand(
+  'cyberPink.editThemeColorAtCursor',
+  async () => {
+    const editor = vscode.window.activeTextEditor;
+    if (!editor) {
+      vscode.window.showWarningMessage('No active editor');
+      return;
     }
-  );
 
-  context.subscriptions.push(cmd);
+    const doc = editor.document;
+    const pos = editor.selection.active;
+    const category = inferTokenType(doc, pos);
 
-  // Apply configured background layers on startup
-  const themePath = path.join(
-    context.extensionPath,
-    'themes',
-    'cyber-pink-pink-theme.json'
-  );
-  await applyBackgroundLayers(themePath);
+    // get json path
+    const themePath = getActiveCyberPinkThemePath(context);
+    if (!themePath) return;
 
-  // Apply current accent preset on startup
+    let currentColor = '#ffffff';
+    try {
+      const raw = await fs.readFile(themePath, 'utf8');
+      const theme = JSON.parse(raw);
+      const scopes = SCOPE_MAP[category] || SCOPE_MAP.variable;
+      const existing = theme.tokenColors.find(item => {
+        const itemScopes = Array.isArray(item.scope) ? item.scope : [item.scope];
+        return itemScopes.some(s => scopes.includes(s));
+      });
+      currentColor = existing ? existing.settings.foreground : '#ffffff';
+    } catch (err) {
+      currentColor = '#ffffff';
+    }
+
+    const newColor = await vscode.window.showInputBox({
+      prompt: `Edit "${category}" theme color (hex)`,
+      value: currentColor,
+      validateInput: value => {
+        return /^#([0-9A-Fa-f]{3,4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$/i.test(value)
+          ? null
+          : 'Enter a valid hex color (e.g. #00f0ff)';
+      }
+    });
+
+    if (!newColor) return;
+
+    try {
+      await updateThemeColor(themePath, category, newColor);
+    } catch {
+      return;
+    }
+
+    const reload = await vscode.window.showInformationMessage(
+      `Updated "${category}" to ${newColor}. Reload to apply?`,
+      'Reload'
+    );
+    if (reload === 'Reload') {
+      vscode.commands.executeCommand('workbench.action.reloadWindow');
+    }
+  }
+);
+context.subscriptions.push(cmd);
+
+
+
+  // -----------------------------
+  // 1. Apply background layers
+  // -----------------------------
+  let themePath = getActiveCyberPinkThemePath(context);
+  if (themePath) {
+    await applyBackgroundLayers(themePath);
+  }
+
+  // -----------------------------
+  // 2. Apply accent preset
+  // -----------------------------
   const accentConfig = vscode.workspace.getConfiguration('cyberPink.accent');
-  const currentPreset = accentConfig.get('preset', 'pink');
-  await applyAccentPreset(themePath, currentPreset);
+  const currentPreset = accentConfig.get('preset', 'pinkNeon');
 
-  // Register accent preset switch command
+  if (themePath) {
+    await applyAccentPreset(themePath, currentPreset);
+  }
+
+  // -----------------------------
+  // 3. Register accent preset switcher
+  // -----------------------------
   const presetCmd = vscode.commands.registerCommand(
     'cyberPink.switchAccentPreset',
     async () => {
+
       const presets = [
-        { label: '🩷 Pink Storm', description: '#FF3399', name: 'pink' },
-        { label: '🩵 Cyan Wave', description: '#00f0ff', name: 'cyan' },
-        { label: '🟢 Neon Lime', description: '#5AFF19', name: 'green' },
-        { label: '🟡 Warning Amber', description: '#FFC800', name: 'amber' },
-        { label: '💜 Psycho Fuchsia', description: '#CC1669', name: 'fuchsia' },
-        { label: '🔵 Circuit Blue', description: '#00AEEF', name: 'blue' },
-        { label: '⚙️ Custom', description: 'Use your own color', name: 'custom' }
+        { label: '💗 Pink Neon',    description: 'Accent: bright cyberpunk pink (#FF3399) — high-visibility glow', name: 'pinkNeon' },
+        { label: '🌸 Pink Soft',    description: 'Accent: muted pink (#D92B82) — softer tone for long coding sessions', name: 'pinkSoft' },
+        { label: '💙 Cyan Neon',    description: 'Accent: electric cyan (#00F0FF) — vivid neon glow with sharp contrast', name: 'cyanNeon' },
+        { label: '🫧 Cyan Soft',    description: 'Accent: calm cyan (#00CCD9) — reduced saturation for relaxed visibility', name: 'cyanSoft' },
+        { label: '🟢 Green Neon',   description: 'Accent: lime green (#5AFF19) — energetic, high-visibility highlight', name: 'greenNeon' },
+        { label: '🟡 Amber Neon',   description: 'Accent: warm amber (#FFC800) — warning-style cyber glow', name: 'amberNeon' },
+        { label: '💜 Fuchsia Neon', description: 'Accent: deep fuchsia (#CC1669) — bold, intense cyberpunk tone', name: 'fuchsiaNeon' },
+        { label: '🔵 Blue Neon',    description: 'Accent: cool blue (#00AEEF) — clean, futuristic highlight', name: 'blueNeon' },
+        { label: '🎨 Custom Palette', description: 'Accent: choose any color — default is white (#FFFFFF) for visibility', name: 'custom' }
       ];
 
       const selected = await vscode.window.showQuickPick(presets, {
@@ -384,8 +428,10 @@ async function activate(context) {
 
       if (!selected) return;
 
-      // Save preset selection to settings
       await accentConfig.update('preset', selected.name, true);
+
+      themePath = getActiveCyberPinkThemePath(context);
+      if (!themePath) return;
 
       await applyAccentPreset(themePath, selected.name);
 
@@ -400,8 +446,15 @@ async function activate(context) {
   );
   context.subscriptions.push(presetCmd);
 
-  // Watch for background layer setting changes
+
+  // -----------------------------
+  // 4. Watch for config changes
+  // -----------------------------
   const configListener = vscode.workspace.onDidChangeConfiguration(async event => {
+
+    themePath = getActiveCyberPinkThemePath(context);
+    if (!themePath) return;
+
     if (event.affectsConfiguration('cyberPink.background')) {
       await applyBackgroundLayers(themePath);
       const reload = await vscode.window.showInformationMessage(
@@ -415,8 +468,9 @@ async function activate(context) {
 
     if (event.affectsConfiguration('cyberPink.accent')) {
       const newAccentConfig = vscode.workspace.getConfiguration('cyberPink.accent');
-      const newPreset = newAccentConfig.get('preset', 'pink');
+      const newPreset = newAccentConfig.get('preset', 'pinkNeon');
       await applyAccentPreset(themePath, newPreset);
+
       const reload = await vscode.window.showInformationMessage(
         'Cyber Pink accent preset updated. Reload to apply?',
         'Reload'
@@ -426,6 +480,7 @@ async function activate(context) {
       }
     }
   });
+
   context.subscriptions.push(configListener);
 }
 

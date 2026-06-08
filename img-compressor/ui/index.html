@@ -1,0 +1,50 @@
+<!--
+Copyright (c) 2026 1abcdefggs (takaer)
+Licensed under the MIT License
+See LICENSE file in the project root for full license information
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Screenshot Uploader</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .toc-item {
+      padding: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    .toc-item.active {
+      background: #ff00aa33;
+      border-color: #ff00aa;
+    }
+
+    #drop-area {
+      margin-top: 20px;
+      padding: 40px;
+      border: 2px dashed #999;
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>toc auto GENERATOR</h2>
+  <div id="toc"></div>
+
+  <div id="drop-area">
+    DragDrop Area
+  </div>
+
+  <script src="uploader.js"></script>
+</body>
+</html>
