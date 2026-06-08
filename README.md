@@ -120,6 +120,14 @@ Right-click in any editor and choose **Edit Theme Color at Cursor** to tweak tok
 
 ## Changelog
 
+### 0.3.1 — Patch Fixes & Marketplace Compliance
+
+-Fixed invalid image paths in README (Windows-style "\" → "/" conversion)
+-Replaced remaining SVG references to comply with VS Code Marketplace restrictions
+-Updated README image sources to valid PNG/WEBP formats
+-Ensured GitHub Actions release workflow passes successfully
+-Minor cleanup and consistency fixes following the 0.3.0 update
+
 ### 0.3.0
 
 -Theme Naming Update & README Improvements
