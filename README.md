@@ -32,7 +32,7 @@ A pure black background maximizes contrast and emphasizes neon elements.
 | Variation | Window border, IDE frame |
 | :--- | :--- |
 | Choice of response: Choose from 4 options. | Neon border: The window borders glow like distinct neon accents. |
-| ![Color Accent](/images/color-samples/color-accent.png) | <img src="images/screenshots/cyber-pink-windowborder.webp" width="70%" /> |
+| ![Color Accent](images/color-samples/color-accent.png) | <img src="images/screenshots/cyber-pink-windowborder.webp" width="70%" /> |
 | If the colors are too vibrant, select "Soft". | Background structure (outside is darkest, inside is lightest, slightly) |
 
 ### Background Hierarchy (Outside-In Brightness)
