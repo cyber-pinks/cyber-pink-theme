@@ -1,6 +1,6 @@
 # Cyber Pink Theme
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) [![Release](https://img.shields.io/github/v/release/cyber-pinks/cyber-pink-theme)](https://github.com/cyber-pinks/cyber-pink-theme/releases) [![GitHub last commit](https://img.shields.io/github/last-commit/cyber-pinks/cyber-pink-theme)](https://github.com/cyber-pinks/cyber-pink-theme/commits)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.png)](./LICENSE) [![Release](https://img.shields.io/github/v/release/cyber-pinks/cyber-pink-theme)](https://github.com/cyber-pinks/cyber-pink-theme/releases) [![GitHub last commit](https://img.shields.io/github/last-commit/cyber-pinks/cyber-pink-theme)](https://github.com/cyber-pinks/cyber-pink-theme/commits)
   
 A vibrant VS Code color theme inspired by futuristic cyberpunk.
 
