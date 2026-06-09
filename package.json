@@ -16,6 +16,11 @@
   "engines": {
     "vscode": "^1.74.0"
   },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
   "categories": ["Themes"],
   "main": "./extension.js",
   "scripts": {
