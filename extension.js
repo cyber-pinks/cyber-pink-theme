@@ -59,11 +59,11 @@ function inferTokenType(doc, pos) {
   }
 
   let word = '';
+  let wordRange = null;
   try {
-    const wordRange = doc.getWordRangeAtPosition(pos);
+    wordRange = doc.getWordRangeAtPosition(pos);
     word = wordRange ? doc.getText(wordRange) : '';
   } catch {
-    // getWordRangeAtPosition may throw on boundary positions; fall through
     word = '';
   }
 
@@ -105,7 +105,6 @@ const PRESET_MAP = {
   fuchsiaNeon: { base: '#CC1669', hover: '#990F4E' },
   blueNeon:    { base: '#00AEEF', hover: '#008BBF' }
 };
-
 
 /**
  * Apply the selected accent preset to the theme JSON.
@@ -289,39 +288,76 @@ async function updateThemeColor(themePath, category, newColor) {
  * Detect the currently active Cyber Pink theme and return its JSON path.
  */
 function getActiveCyberPinkThemePath(context) {
-  const activeTheme = vscode.window.activeColorTheme;
+  const config = vscode.workspace.getConfiguration('workbench');
+  const currentThemeName = config.get('colorTheme');
 
-  if (!activeTheme || !activeTheme.label) {
+  if (!currentThemeName) {
     vscode.window.showWarningMessage('Could not detect active theme.');
     return null;
   }
 
-  const label = activeTheme.label.toLowerCase();
-  let fileName = null;
-
-  if (label.includes('pink') && label.includes('neon')) {
-    fileName = 'cyber-pink-pink-neon.json';
-  } else if (label.includes('pink') && label.includes('soft')) {
-    fileName = 'cyber-pink-pink-soft.json';
-  } else if (label.includes('cyan') && label.includes('neon')) {
-    fileName = 'cyber-pink-cyan-neon.json';
-  } else if (label.includes('cyan') && label.includes('soft')) {
-    fileName = 'cyber-pink-cyan-soft.json';
-  } else {
-    vscode.window.showWarningMessage(
-      `Active theme "${activeTheme.label}" is not a Cyber Pink theme.`
-    );
+ 
+  if (!currentThemeName.includes('CYBER PINK')) {
+  
     return null;
   }
 
-  return path.join(context.extensionPath, 'themes', fileName);
 }
 
 
-/**
- * Activate the extension and register commands.
- */
 async function activate(context) {
+
+// Pink Neon
+const applyPinkNeon = vscode.commands.registerCommand(
+  'cyberPink.applyPinkNeon',
+  () => {
+    vscode.workspace.getConfiguration().update(
+      'workbench.colorTheme',
+      'CYBER PINK ▶ THEME — 💗 PINK NEON',
+      true
+    );
+  }
+);
+context.subscriptions.push(applyPinkNeon);
+
+// Pink Soft
+const applyPinkSoft = vscode.commands.registerCommand(
+  'cyberPink.applyPinkSoft',
+  () => {
+    vscode.workspace.getConfiguration().update(
+      'workbench.colorTheme',
+      'CYBER PINK ▶ THEME — 🌸 PINK SOFT',
+      true
+    );
+  }
+);
+context.subscriptions.push(applyPinkSoft);
+
+// Cyan Neon
+const applyCyanNeon = vscode.commands.registerCommand(
+  'cyberPink.applyCyanNeon',
+  () => {
+    vscode.workspace.getConfiguration().update(
+      'workbench.colorTheme',
+      'CYBER PINK ▶ THEME — 💙 CYAN NEON',
+      true
+    );
+  }
+);
+context.subscriptions.push(applyCyanNeon);
+
+// Cyan Soft
+const applyCyanSoft = vscode.commands.registerCommand(
+  'cyberPink.applyCyanSoft',
+  () => {
+    vscode.workspace.getConfiguration().update(
+      'workbench.colorTheme',
+      'CYBER PINK ▶ THEME — 🫧 CYAN SOFT',
+      true
+    );
+  }
+);
+context.subscriptions.push(applyCyanSoft);
 
 const cmd = vscode.commands.registerCommand(
   'cyberPink.editThemeColorAtCursor',

@@ -2,7 +2,7 @@
   "name": "cyber-pink-theme",
   "displayName": "Cyber Pink Color Theme",
   "description": "💗 Pink & 💙 cyan / cyberpunk / neon glow / dark color theme for VS Code — futuristic contrast and bold style.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "publisher": "cyber-pinks",
   "license": "MIT",
   "keywords": ["theme","color theme","dark theme","cyber","cyber pink","cyberpunk","neon","pink","cyan","black"],
@@ -29,56 +29,85 @@
   },
   "activationEvents": [
     "onStartupFinished",
+    "onCommand:cyberPink.applyPinkNeon",
+    "onCommand:cyberPink.applyPinkSoft",
+    "onCommand:cyberPink.applyCyanNeon",
+    "onCommand:cyberPink.applyCyanSoft",
     "onCommand:cyberPink.editThemeColorAtCursor",
     "onCommand:cyberPink.switchAccentPreset"
   ],
   "contributes": {
     "themes": [
       {
-        "label": "💗 CYBER PINK — Pink Neon",
+        "label": "CYBER PINK ▶ THEME — 💗 PINK NEON",
         "uiTheme": "vs-dark",
         "path": "./themes/cyber-pink-pink-neon.json",
-        "description": "Pink Neon accent. Pure black base with cyberpunk glow."
+        "description": "Pink Neon accent. Pure black base with cyberpunk glow. Keywords: cyber, pink, neon."
       },
       {
-        "label": "🌸 CYBER PINK — Pink Soft",
+        "label": "CYBER PINK ▶ THEME — 🌸 PINK SOFT",
         "uiTheme": "vs-dark",
         "path": "./themes/cyber-pink-pink-soft.json",
-        "description": "Pink Soft accent. Muted glow for extended sessions."
+        "description": "Pink Soft accent. Muted glow for extended sessions. Keywords: cyber, pink, soft."
       },
       {
-        "label": "💙 CYBER PINK — Cyan Neon",
+        "label": "CYBER PINK ▶ THEME — 💙 CYAN NEON",
         "uiTheme": "vs-dark",
         "path": "./themes/cyber-pink-cyan-neon.json",
-        "description": "Cyan Neon accent. Pure black base with cyberpunk glow."
+        "description": "Cyan Neon accent. Pure black base with cyberpunk glow. Keywords: cyber, cyan, neon."
       },
       {
-        "label": "🫧 CYBER PINK — Cyan Soft",
+        "label": "CYBER PINK ▶ THEME — 🫧 CYAN SOFT",
         "uiTheme": "vs-dark",
         "path": "./themes/cyber-pink-cyan-soft.json",
-        "description": "Cyan Soft accent. Muted glow for extended sessions."
+        "description": "Cyan Soft accent. Muted glow for extended sessions. Keywords: cyber, cyan, soft."
       }
     ],
     "commands": [
       {
-        "command": "cyberPink.editThemeColorAtCursor",
-        "title": "Edit Theme Color at Cursor",
-        "category": "Cyber Pink"
+        "command": "cyberPink.applyPinkNeon",
+        "title": "▶ THEME — 💗 PINK NEON SET",
+        "category": "CYBER PINK"
+      },
+      {
+        "command": "cyberPink.applyPinkSoft",
+        "title": "▶ THEME — 🌸 PINK SOFT SET",
+        "category": "CYBER PINK"
+      },
+      {
+        "command": "cyberPink.applyCyanNeon",
+        "title": "▶ THEME — 💙 CYAN NEON SET",
+        "category": "CYBER PINK"
+      },
+      {
+        "command": "cyberPink.applyCyanSoft",
+        "title": "▶ THEME — 🫧 CYAN SOFT SET",
+        "category": "CYBER PINK"
       },
       {
         "command": "cyberPink.switchAccentPreset",
-        "title": "Switch Accent Preset",
-        "category": "Cyber Pink"
+        "title": "▶ THEME — SWITCH ACCENT PRESET (THEME)",
+        "category": "CYBER PINK"
+      },
+      {
+        "command": "cyberPink.editThemeColorAtCursor",
+        "title": "▶ EDITOR — EDIT THEME COLOR AT CURSOR",
+        "category": "CYBER PINK"
       }
     ],
     "menus": {
-      "editor/context": [
-        {
-          "command": "cyberPink.editThemeColorAtCursor",
-          "group": "2_zcommand@5"
-        }
-      ]
-    },
+      "commandPalette": [
+        { "command": "cyberPink.applyPinkNeon", "when": "true", "group": "1a_pink_neon" },
+        { "command": "cyberPink.applyPinkSoft", "when": "true", "group": "1b_pink_soft" },
+        { "command": "cyberPink.applyCyanNeon", "when": "true", "group": "2a_cyan_neon" },
+        { "command": "cyberPink.applyCyanSoft", "when": "true", "group": "2b_cyan_soft" },
+        { "command": "cyberPink.switchAccentPreset", "when": "true", "group": "3_accent" },
+        { "command": "cyberPink.editThemeColorAtCursor", "when": "true", "group": "4_editor" }
+      ],
+  "editor/context": [
+    { "command": "cyberPink.editThemeColorAtCursor", "when": "true", "group": "2_zcommand" }
+  ]
+},
     "configuration": {
       "title": "Cyber Pink",
       "properties": {
@@ -102,7 +131,7 @@
           "default": "#111320",
           "description": "Surface background color (widgets, inputs)"
         },
-              "cyberPink.accent.preset": {
+        "cyberPink.accent.preset": {
           "type": "string",
           "enum": [
             "pinkNeon",

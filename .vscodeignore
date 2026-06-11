@@ -1,0 +1,6 @@
+.github/**
+.gitignore
+.markdownlint.jsonc
+examples/**
+img-compressor/**
+semantics-color-mapping/**
