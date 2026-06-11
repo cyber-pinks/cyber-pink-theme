@@ -10,7 +10,11 @@ A vibrant VS Code color theme inspired by futuristic cyberpunk.
 * **Author:** [1abcdefggs (takaer)](https://github.com/1abcdefggs)
 * **License:** [MIT](https://opensource.org/licenses/MIT) © 2026 1abcdefggs
 
-## Design philosophy and features
+## Design philosophy and features,
+
+###　 preview
+
+<img src="images/screenshots/Screenshot-vid.webp">
 
 For users who always use dark mode😎.
 A vibrant VS Code color theme inspired by cyberpunk, available in two primary colors: Neon Pink & Cyan.
@@ -18,22 +22,20 @@ However, it is not suitable for people who easily experience eye strain from hig
 
 ### Variations
 
-💡How to build a futuristic world:Darken the room.
+💡 **How to build a futuristic world:** Darken the room.
 
-| **💗Pink Neon** | **💙Cyan Noen** |
-| :---: | :---: |
-| Default color | By the way, the color I'm using is cyan😊 |
-| <img src="images/screenshots/pink-neon-theme.webp" width="80%" alt="pink neon theme"/> | <img src="images/screenshots/cyan-neon-theme.webp" width="80%" alt="cyan neon theme" /> |
+| | 💗 Pink Theme | 💙 Cyan Theme |
+| :--- | :--- | :--- |
+| **Neon**<br><small>Vivid & Vibrant</small> | <img src="images/screenshots/pink-neon-theme-p1.png" width="400" alt="Pink Neon"/> | <img src="images/screenshots/cyan-neon-theme-p1.png" width="400" alt="Cyan Neon"/> |
+| **Soft**<br><small>Calm & Eye-friendly</small> | <img src="images/screenshots/pink-soft-theme-p1.png" width="400" alt="Pink Soft"/> | <img src="images/screenshots/cyan-soft-theme-p1.png" width="400" alt="Cyan Soft"/> |
+
+*Neon themes provide high-contrast, energetic lighting for a true cyber-punk feel, while Soft themes offer a more subtle, comfortable palette for long hours of coding.*
 
 ## Layout & Contrast UI
 
 A pure black background maximizes contrast and emphasizes neon elements.
 
-| Variation | Window border, IDE frame |
-| :--- | :--- |
-| Choice of response: Choose from 4 options. | Neon border: The window borders glow like distinct neon accents. |
-| ![Color Accent](images/color-samples/color-accent.png) |  |
-| If the colors are too vibrant, select "Soft". | Background structure (outside is darkest, inside is lightest, slightly) |
+ ![Color Accent](images/color-samples/color-accent.png) 
 
 ### Background Hierarchy (Outside-In Brightness)
 
@@ -119,6 +121,15 @@ Right-click in any editor and choose **Edit Theme Color at Cursor** to tweak tok
 ---
 
 ## Changelog
+
+### 0.3.2 — Performance & Quality Update
+
+- Optimized assets: Converted all screenshots to WebP format for faster loading
+- Improved README: Clarified differences between Neon and Soft themes with comparison tables
+- Enhanced developer experience: Added automated image compression scripts
+- Added semantic color mapping test cases for reliable theme updates
+- Updated .vscodeignore to ensure clean packaging
+- General housekeeping and version bump
 
 ### 0.3.1 — Patch Fixes & Marketplace Compliance
 
