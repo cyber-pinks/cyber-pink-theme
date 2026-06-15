@@ -5,7 +5,7 @@
   "version": "0.3.2",
   "publisher": "cyber-pinks",
   "license": "MIT",
-  "keywords": ["theme","color theme","dark theme","cyber","cyber pink","cyberpunk","neon","pink","cyan","black"],
+  "keywords": ["theme","color theme","dark theme","cyber","cyber pink","cyberpunk","neon","pink","cyan","black", "dark mode"],
   "devDependencies": {
     "sharp": "^0.33.0"
   },
@@ -18,7 +18,7 @@
   },
   "icon": "images/icon.png",
   "galleryBanner": {
-    "color": "#C80000",
+    "color": "#000000e6",
     "theme": "dark"
   },
   "categories": ["Themes"],

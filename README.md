@@ -1,20 +1,18 @@
 # Cyber Pink Theme
+
 [![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/cyber-pinks.cyber-pink-theme.svg)](https://marketplace.visualstudio.com/items?itemName=cyber-pinks.cyber-pink-theme) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.png)](./LICENSE) [![Release](https://img.shields.io/github/v/release/cyber-pinks/cyber-pink-theme)](https://github.com/cyber-pinks/cyber-pink-theme/releases) [![GitHub last commit](https://img.shields.io/github/last-commit/cyber-pinks/cyber-pink-theme)](https://github.com/cyber-pinks/cyber-pink-theme/commits)
-  
-A vibrant VS Code color theme inspired by futuristic cyberpunk.
 
 ## License & Credits
 
-* **Publisher:** [CYBER-PINKS](https://github.com/CYBER-PINKS/)
-* **Author:** [1abcdefggs (takaer)](https://github.com/1abcdefggs)
-* **License:** [MIT](https://opensource.org/licenses/MIT) © 2026 1abcdefggs
+ **Publisher:** [CYBER-PINKS](https://github.com/CYBER-PINKS/)  / **Author:** [1abcdefggs (takaer)](https://github.com/1abcdefggs)  / **License:** [MIT](https://opensource.org/licenses/MIT) © 2026 1abcdefggs
 
-## Design philosophy and features,
-
-###　 preview
+## Screenshot
 
 <img src="images/screenshots/Screenshot-vid.webp">
 
+### Design philosophy and features
+
+A vibrant VS Code color theme inspired by futuristic cyberpunk.
 For users who always use dark mode😎.
 A vibrant VS Code color theme inspired by cyberpunk, available in two primary colors: Neon Pink & Cyan.
 However, it is not suitable for people who easily experience eye strain from high contrast.
@@ -34,7 +32,7 @@ However, it is not suitable for people who easily experience eye strain from hig
 
 A pure black background maximizes contrast and emphasizes neon elements.
 
- ![Color Accent](images/color-samples/color-accent.png) 
+ ![Color Accent](images/color-samples/color-accent.png)
 
 ### Background Hierarchy (Outside-In Brightness)
 
