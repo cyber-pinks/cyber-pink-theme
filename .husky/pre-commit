@@ -1,0 +1,49 @@
+#!/bin/sh
+
+VERSION=$(jq -r '.version' package.json)
+
+CHANGELOG_CONTENT=$(awk 'BEGIN{IGNORECASE=1} /^##[[:space:]]*Changelog[[:space:]]*$/ {flag=1; next} /^##[[:space:]]/ && flag==1 {flag=0} flag==1 {print}' README.md)
+
+LAST_VERSION=$(printf "%s\n" "$CHANGELOG_CONTENT" \
+  | sed 's/\r$//' \
+  | grep -E '^[[:space:]]*#+[[:space:]]*v?[0-9]+\.[0-9]+\.[0-9]+' \
+  | head -n 1 \
+  | sed -E 's/^[[:space:]]*#+[[:space:]]*v?([0-9]+\.[0-9]+\.[0-9]+).*/v\1/')
+
+
+if [ -z "$LAST_VERSION" ]; then
+  LAST_VERSION=$(sed 's/\r$//' README.md | grep -E '^[[:space:]]*v?[0-9]+\.[0-9]+\.[0-9]+' | head -n 1 | sed -E 's/^[[:space:]]*v?([0-9]+\.[0-9]+\.[0-9]+).*/v\1/')
+fi
+
+if [ -z "$LAST_VERSION" ]; then
+  LAST_VERSION="(not found)"
+fi
+
+if ! printf "%s\n" "$CHANGELOG_CONTENT" | grep -qE "v?$VERSION"; then
+  echo ""
+  echo "■Verification:"
+  echo ""
+  echo "Package.json: v$VERSION"
+  echo "README.md: $LAST_VERSION"
+  echo ""
+  echo " The PackageJSON version will be committed as v$VERSION."
+  echo "However, the current README changelog does not mention v$VERSION."
+  echo "The README change history remains $LAST_VERSION."
+  echo ""
+  echo "■What will happen?:"
+  echo "If you commit and push as is, when you package it for a release,"
+  echo "the README information will remain outdated."
+  echo ""
+  echo "■Solution:"
+  echo " Before committing the version bumped Package.json file,"
+  echo " add a new entry to the README change history."
+  echo ""
+  echo "■Steps"
+  echo "1. Write the changes to the PackageJSON version in the README."
+  echo "2. Commit the README."
+  echo "3. Commit Package.json."
+  echo ""
+  exit 1
+fi
+
+exit 0
