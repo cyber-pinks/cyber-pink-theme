@@ -1,6 +1,12 @@
+# --- VS Code / Default---
+.vscode/**
+.vscode-test/**
+**/cyber-pink-theme-rule.md
 .github/**
-.gitignore
-.markdownlint.jsonc
-examples/**
-img-compressor/**
+.husky/**
+node_modules/**
+scripts/**
 semantics-color-mapping/**
+*.code-workspace
+.gitignore
+*.bak
