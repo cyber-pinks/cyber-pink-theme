@@ -1,13 +1,28 @@
 {
   "name": "cyber-pink-theme",
   "displayName": "Cyber Pink Color Theme",
-  "description": "💗 Pink & 💙 cyan / cyberpunk / neon glow / dark color theme for VS Code — futuristic contrast and bold style.",
-  "version": "0.3.2",
+  "description": "💗 Pink & 💙 Cyan / Cyberpunk / Neon glow / Dark mode color theme for VS Code — futuristic contrast and bold style.",
+  "version": "0.4.1",
   "publisher": "cyber-pinks",
   "license": "MIT",
-  "keywords": ["theme","color theme","dark theme","cyber","cyber pink","cyberpunk","neon","pink","cyan","black", "dark mode"],
+  "keywords": [
+      "theme",
+      "color theme",
+      "dark mode",
+      "cyber pink",
+      "cyber pink theme",
+      "cyberpunk",
+      "neon",
+      "pink",
+      "cyan",
+      "aesthetic",
+      "futuristic",
+      "syntax",
+      "high-contrast"
+    ],
   "devDependencies": {
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.0",
+    "typescript": "^6.0.3"
   },
   "repository": {
     "type": "git",
@@ -21,11 +36,11 @@
     "color": "#000000e6",
     "theme": "dark"
   },
-  "categories": ["Themes"],
+  "categories": [
+    "Themes"
+  ],
   "main": "./extension.js",
   "scripts": {
-    "resize-images": "node scripts/resize-images.mjs",
-    "resize-promo": "node img-compressor/scripts/pipeline/step5-resize-promo-images.mjs"
   },
   "activationEvents": [
     "onStartupFinished",
@@ -97,17 +112,50 @@
     ],
     "menus": {
       "commandPalette": [
-        { "command": "cyberPink.applyPinkNeon", "when": "true", "group": "1a_pink_neon" },
-        { "command": "cyberPink.applyPinkSoft", "when": "true", "group": "1b_pink_soft" },
-        { "command": "cyberPink.applyCyanNeon", "when": "true", "group": "2a_cyan_neon" },
-        { "command": "cyberPink.applyCyanSoft", "when": "true", "group": "2b_cyan_soft" },
-        { "command": "cyberPink.switchAccentPreset", "when": "true", "group": "3_accent" },
-        { "command": "cyberPink.editThemeColorAtCursor", "when": "true", "group": "4_editor" }
+        {
+          "command": "cyberPink.applyPinkNeon",
+          "when": "true",
+          "group": "1a_pink_neon"
+        },
+        {
+          "command": "cyberPink.applyPinkSoft",
+          "when": "true",
+          "group": "1b_pink_soft"
+        },
+        {
+          "command": "cyberPink.applyCyanNeon",
+          "when": "true",
+          "group": "2a_cyan_neon"
+        },
+        {
+          "command": "cyberPink.applyCyanSoft",
+          "when": "true",
+          "group": "2b_cyan_soft"
+        },
+        {
+          "command": "cyberPink.switchAccentPreset",
+          "when": "true",
+          "group": "3_accent"
+        },
+        {
+          "command": "cyberPink.editThemeColorAtCursor",
+          "when": "true",
+          "group": "4_editor"
+        }
       ],
-  "editor/context": [
-    { "command": "cyberPink.editThemeColorAtCursor", "when": "true", "group": "2_zcommand" }
-  ]
-},
+      "editor/context": [
+        {
+          "command": "cyberPink.editThemeColorAtCursor",
+          "when": "editorTextFocus && !editorReadonly",
+          "group": "navigation"
+        },
+        {
+          "command": "cyberPink.switchAccentPreset",
+          "when": "editorTextFocus && !editorReadonly",
+          "group": "navigation"
+        }
+      ]
+    },
     "configuration": {
       "title": "Cyber Pink",
       "properties": {
