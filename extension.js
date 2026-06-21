@@ -296,14 +296,12 @@ function getActiveCyberPinkThemePath(context) {
     return null;
   }
 
- 
   if (!currentThemeName.includes('CYBER PINK')) {
   
     return null;
   }
 
 }
-
 
 async function activate(context) {
 
@@ -419,8 +417,6 @@ const cmd = vscode.commands.registerCommand(
 );
 context.subscriptions.push(cmd);
 
-
-
   // -----------------------------
   // 1. Apply background layers
   // -----------------------------
@@ -481,7 +477,6 @@ context.subscriptions.push(cmd);
     }
   );
   context.subscriptions.push(presetCmd);
-
 
   // -----------------------------
   // 4. Watch for config changes

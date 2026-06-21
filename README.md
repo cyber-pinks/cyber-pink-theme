@@ -8,8 +8,6 @@
 [![Release](https://img.shields.io/github/v/release/cyber-pinks/cyber-pink-theme?style=flat-square&color=aqua&labelColor=aqua&logoColor=000000)](https://github.com/cyber-pinks/cyber-pink-theme/releases)
 [![Commits](https://img.shields.io/github/commit-activity/w/cyber-pinks/cyber-pink-theme?style=flat-square&logo=github&labelColor=aqua&color=aqua&logoColor=000000)](https://github.com/cyber-pinks/cyber-pink-theme)![License](https://img.shields.io/github/package-json/license/cyber-pinks/cyber-pink-theme?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)
 
-
-
 [![Marketplace ID](https://img.shields.io/badge/MARKETPLACE_PUBLISHER-CYBER--PINKS-aqua?style=flat-square&color=aqua&labelColor=343434&logoColor=ffffff)](https://marketplace.visualstudio.com/publishers/cyber-pinks)
 [![Organization](https://img.shields.io/badge/ORG-CYBER--PINKS-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/CYBER-PINKS)
 [![Author](https://img.shields.io/badge/AUTHOR-1abcdefggs-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/1abcdefggs)
@@ -75,7 +73,6 @@ If you like this style, please give it a try😻
   📝 <a href="#change-log" style="color:#00Eaff;">Change Log</a>
 </div>
 </div>
-
 
 ## ✨ DESIGN PHILOSOPHY & FEATURES
 
@@ -219,9 +216,7 @@ while Soft themes offer a more subtle, comfortable palette for long hours of cod
 
 </table>
 </div>
-
 </div>
-
 
 ---
 
@@ -253,9 +248,6 @@ while Soft themes offer a more subtle, comfortable palette for long hours of cod
 </div>
 
 
-
-
-
 ### THEME DETAILS
 
 An example of how it appears in actual code.  
@@ -275,14 +267,9 @@ Clicking on the PINK, neon, or cyan images will display them in a larger size.
 
 💡 How to create your futuristic space: Programming Music 🎶
 
-
-
-
 ---
 
-
 All semantic and accent color mappings used in this theme are available here:
-
 
 
 ### Semantic Token Colors  in the editor area
@@ -299,7 +286,6 @@ compact,liner,long,middle,short,error-handler,error, are all type scripts.
 // Liner.ts
 import {EventEmitter} from"events";namespace N{export class C{p="pink";m(){return this.p.toUpperCase()}}export interface I{a:number;b:number}export type T={ok:boolean};export function U<K>(v:K){return v}export enum E{A="a",B="b"}}function D(t:any){}class S{x=0;y=0}class Ev{private ls:(()=>void)[]=[];add(f:()=>void){this.ls.push(f)}fire(){this.ls.forEach(f=>f())}}const MACRO=42;loop:for(let i=0;i<1;i++)break loop;const reg=/neon-(pink|cyan)/,num=123,str="CYBER PINK";function fn(a:string){const b=a+"!";return b}abstract class A{static s=1;readonly r=2;abstract abs():void;async run(){return"async"}/**@deprecated*/old(){return"x"}}(function(){const c=new N.C(),g=c.m(),e=new Ev();e.add(()=>console.log("fire"));e.fire();console.log(g,fn("hi"),N.E.A,str,num,reg.test("neon-pink"))})();
 ```
-
 
 ```ts
 // compact.ts
@@ -326,8 +312,6 @@ Markdown previews are rendered as HTML, so colors are not reflected. To see the 
 https://github.com/cyber-pinks/cyber-pink-theme/tree/main/semantics-color-mapping
 
 All semantic and accent color mappings used in this theme are available here:
-
-
 
 ---
 
@@ -356,7 +340,6 @@ Alternatively, you can install it from the Marketplace.
 Clicking the install button from the Marketplace will open VS Code and allow you to install it.
 
 [https://marketplace.visualstudio.com/items?itemName=cyber-pinks.cyber-pink-theme](https://marketplace.visualstudio.com/items?itemName=cyber-pinks.cyber-pink-theme)
-
 
 
 ---
@@ -405,8 +388,6 @@ npx @vscode/vsce package
 **2. Install the generated `.vsix` file:** You can do this from the Extensions view (`...` → **Install from VSIX...**). Alternatively, you can right-click the file in the VS Code Explorer and select **Install Extension VSIX**.
 
 
-
-
 ### Commands
 
 | Command | Title | Description |
@@ -433,6 +414,10 @@ I tried putting in a badge, but it's making my eyes hurt.😂
 [ ![Issues pull REQUEST](https://img.shields.io/github/issues-pr-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/pulls)[ ![closed Issues pr](https://img.shields.io/github/issues-pr-closed-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/pulls?q=is%3Apr+is%3Aclosed)
 
 
+ 
+ ### [0.4.2]
+- **Cleanup**: Removed unnecessary image files (themeselect2, theme2) from the project.
+- **Maintenance**: Cleaned up and optimized internal files.
 
 
  ### 0.4.1 — Status Bar Compact Hover Fix
@@ -539,7 +524,6 @@ I tried putting in a badge, but it's making my eyes hurt.😂
 ## REPOSITORY & ISSUES
 
 [ ![Repository](https://img.shields.io/badge/Repo-cyber--pink--theme-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff) ](https://github.com/cyber-pinks/cyber-pink-theme)[ ![Release](https://img.shields.io/github/v/release/cyber-pinks/cyber-pink-theme?style=flat-square&color=aqua&labelColor=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/releases)[ ![Commits](https://img.shields.io/github/commit-activity/w/cyber-pinks/cyber-pink-theme?style=flat-square&logo=github&labelColor=aqua&color=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/commits)[ ![Language](https://img.shields.io/github/languages/top/1abcdefggs/cyber-pink-theme?style=flat-square&logo=javascript&labelColor=aqua&color=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme)
-
 
 
 📁 Repository: [https://github.com/cyber-pinks/cyber-pink-theme](https://github.com/cyber-pinks/cyber-pink-theme)  

@@ -2,32 +2,34 @@
   "name": "cyber-pink-theme",
   "displayName": "Cyber Pink Color Theme",
   "description": "💗 Pink & 💙 Cyan / Cyberpunk / Neon glow / Dark mode color theme for VS Code — futuristic contrast and bold style.",
-  "version": "0.4.1",
-  "homepage": "https://cyber-pinks.github.io/",
+  "version": "0.4.2",
+  "homepage": "https://cyber-pinks.github.io/cyber-pink-theme/",
   "publisher": "cyber-pinks",
+  "author": {
+    "name": "1abcdefggs",
+    "url": "https://github.com/1abcdefggs"
+  },
   "license": "MIT",
+  "pricing": "Free",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyber-pinks/cyber-pink-theme.git"
+  },
+  "bugs": {
+  "url": "https://github.com/cyber-pinks/cyber-pink-theme/issues"
+  },
   "keywords": [
-      "theme",
-      "color theme",
-      "dark mode",
-      "cyber pink",
-      "cyber pink theme",
-      "cyberpunk",
-      "neon",
-      "pink",
-      "cyan",
-      "aesthetic",
-      "futuristic",
-      "syntax",
-      "high-contrast"
-    ],
+    "dark",
+    "cyberpunk",
+    "neon",
+    "pink",
+    "cyan",
+    "high-contrast",
+    "aesthetic"
+  ],
   "devDependencies": {
     "sharp": "^0.33.0",
     "typescript": "^6.0.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cyber-pinks/cyber-pink-theme"
   },
   "engines": {
     "vscode": "^1.74.0"
