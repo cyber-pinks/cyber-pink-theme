@@ -7,14 +7,14 @@ name: Publish Release
 on:
   push:
     tags:
-      - 'v*' # Triggers when a version tag like v0.2.1 is pushed
+      - 'v*' 
   workflow_dispatch:
 
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Permission required to create a GitHub Release
+      contents: write 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -30,11 +30,14 @@ jobs:
 
       - name: Build VSIX Package
         run: npx @vscode/vsce package --no-dependencies
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
             *.vsix
+
+          generate_release_notes: true 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
