@@ -2,11 +2,17 @@
 
 [![Marketplace](https://img.shields.io/visual-studio-marketplace/v/cyber-pinks.cyber-pink-theme?style=for-the-badge&logo=visualstudiocode&color=aqua&labelColor=aqua&logoColor=000000&label=Marketplace-install)](https://marketplace.visualstudio.com/items?itemName=cyber-pinks.cyber-pink-theme)
 
-## LICENSE & CREDIT
-![Repository](https://img.shields.io/badge/Repo-cyber--pink--theme-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)[![Release](https://img.shields.io/github/v/release/cyber-pinks/cyber-pink-theme?style=flat-square&color=aqua&labelColor=aqua&logoColor=000000)](https://github.com/cyber-pinks/cyber-pink-theme/releases)![Commits](https://img.shields.io/github/commit-activity/w/cyber-pinks/cyber-pink-theme?style=flat-square&logo=github&labelColor=aqua&color=aqua&logoColor=000000)
-[![Marketplace ID](https://img.shields.io/badge/marketplace_id-CYBER--PINKS-aqua?style=flat-square&logo=visualstudiocode&logoColor=000000&labelColor=aqua)](https://marketplace.visualstudio.com/publishers/cyber-pinks)
+## CREDIT & LICENSE
+
+[![Repository](https://img.shields.io/badge/Repo-cyber--pink--theme-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/cyber-pinks/cyber-pink-theme)
+[![Release](https://img.shields.io/github/v/release/cyber-pinks/cyber-pink-theme?style=flat-square&color=aqua&labelColor=aqua&logoColor=000000)](https://github.com/cyber-pinks/cyber-pink-theme/releases)
+[![Commits](https://img.shields.io/github/commit-activity/w/cyber-pinks/cyber-pink-theme?style=flat-square&logo=github&labelColor=aqua&color=aqua&logoColor=000000)](https://github.com/cyber-pinks/cyber-pink-theme)![License](https://img.shields.io/github/package-json/license/cyber-pinks/cyber-pink-theme?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)
+
+
+
+[![Marketplace ID](https://img.shields.io/badge/MARKETPLACE_PUBLISHER-CYBER--PINKS-aqua?style=flat-square&color=aqua&labelColor=343434&logoColor=ffffff)](https://marketplace.visualstudio.com/publishers/cyber-pinks)
 [![Organization](https://img.shields.io/badge/ORG-CYBER--PINKS-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/CYBER-PINKS)
-[![Author](https://img.shields.io/badge/AUTHOR-1abcdefggs-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/1abcdefggs)![License](https://img.shields.io/github/package-json/license/cyber-pinks/cyber-pink-theme?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)
+[![Author](https://img.shields.io/badge/AUTHOR-1abcdefggs-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/1abcdefggs)
 
 ## SCREENSHOT
 
@@ -419,9 +425,13 @@ Right-click in any editor and choose **Edit Theme Color at Cursor** to tweak tok
 
 ## CHANGE LOG
 
-![Open Issues](https://img.shields.io/github/issues-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000)![closed Issues](https://img.shields.io/github/issues-closed-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000)
+A problem recently discovered by the developer
+I tried putting in a badge, but it's making my eyes hurt.😂
 
-![Issues pull REQUEST](https://img.shields.io/github/issues-pr-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000)![closed Issues pr](https://img.shields.io/github/issues-pr-closed-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000)
+[ ![Open Issues](https://img.shields.io/github/issues-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/issues)[ ![closed Issues](https://img.shields.io/github/issues-closed-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/issues?q=is%3Aissue+is%3Aclosed)
+
+[ ![Issues pull REQUEST](https://img.shields.io/github/issues-pr-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/pulls)[ ![closed Issues pr](https://img.shields.io/github/issues-pr-closed-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/pulls?q=is%3Apr+is%3Aclosed)
+
 
 
 
@@ -528,17 +538,20 @@ Right-click in any editor and choose **Edit Theme Color at Cursor** to tweak tok
 
 ## REPOSITORY & ISSUES
 
-![Repository](https://img.shields.io/badge/Repo-cyber--pink--theme-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)[![Release](https://img.shields.io/github/v/release/cyber-pinks/cyber-pink-theme?style=flat-square&color=aqua&labelColor=aqua&logoColor=000000)](https://github.com/cyber-pinks/cyber-pink-theme/releases)![Commits](https://img.shields.io/github/commit-activity/w/cyber-pinks/cyber-pink-theme?style=flat-square&logo=github&labelColor=aqua&color=aqua&logoColor=000000)
-![Language](https://img.shields.io/github/languages/top/1abcdefggs/cyber-pink-theme?style=flat-square&logo=javascript&labelColor=aqua&color=aqua&logoColor=000000)
+[ ![Repository](https://img.shields.io/badge/Repo-cyber--pink--theme-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff) ](https://github.com/cyber-pinks/cyber-pink-theme)[ ![Release](https://img.shields.io/github/v/release/cyber-pinks/cyber-pink-theme?style=flat-square&color=aqua&labelColor=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/releases)[ ![Commits](https://img.shields.io/github/commit-activity/w/cyber-pinks/cyber-pink-theme?style=flat-square&logo=github&labelColor=aqua&color=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/commits)[ ![Language](https://img.shields.io/github/languages/top/1abcdefggs/cyber-pink-theme?style=flat-square&logo=javascript&labelColor=aqua&color=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme)
+
+
 
 📁 Repository: [https://github.com/cyber-pinks/cyber-pink-theme](https://github.com/cyber-pinks/cyber-pink-theme)  
 
 📩 Report issues or request features via [Issues](https://github.com/cyber-pinks/cyber-pink-theme/issues) on GitHub.
 
 ## LICENSE & COPYRIGHT
-[![Marketplace ID](https://img.shields.io/badge/marketplace_id-CYBER--PINKS-aqua?style=flat-square&logo=visualstudiocode&logoColor=000000&labelColor=aqua)](https://marketplace.visualstudio.com/publishers/cyber-pinks)
+
+[![Marketplace ID](https://img.shields.io/badge/MARKETPLACE_PUBLISHER-CYBER--PINKS-aqua?style=flat-square&color=aqua&labelColor=343434&logoColor=ffffff)](https://marketplace.visualstudio.com/publishers/cyber-pinks)
 [![Organization](https://img.shields.io/badge/ORG-CYBER--PINKS-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/CYBER-PINKS)
-[![Author](https://img.shields.io/badge/AUTHOR-1abcdefggs-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/1abcdefggs)![License](https://img.shields.io/github/package-json/license/cyber-pinks/cyber-pink-theme?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)
+[![Author](https://img.shields.io/badge/AUTHOR-1abcdefggs-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/1abcdefggs)
+
 
 This project is Licensed under the MIT License [MIT LICENSE](./LICENSE).
 Copyright (c) 2026 [1abcdefggs](https://github.com/1abcdefggs)
