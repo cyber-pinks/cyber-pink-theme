@@ -1,7 +1,5 @@
 # 💗 Cyber Pink Theme
 
-[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/cyber-pinks.cyber-pink-theme?style=for-the-badge&logo=visualstudiocode&color=aqua&labelColor=aqua&logoColor=000000&label=Marketplace-install)](https://marketplace.visualstudio.com/items?itemName=cyber-pinks.cyber-pink-theme)
-
 ## CREDIT & LICENSE
 
 [![Repository](https://img.shields.io/badge/Repo-cyber--pink--theme-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/cyber-pinks/cyber-pink-theme)
@@ -12,7 +10,7 @@
 [![Organization](https://img.shields.io/badge/ORG-CYBER--PINKS-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/CYBER-PINKS)
 [![Author](https://img.shields.io/badge/AUTHOR-1abcdefggs-aqua?style=flat-square&logo=github&color=aqua&labelColor=343434&logoColor=ffffff)](https://github.com/1abcdefggs)
 
-## SCREENSHOT
+## 📸 Preview
 
 If you like this style, please give it a try😻
 
@@ -27,7 +25,31 @@ If you like this style, please give it a try😻
      ">
 
  I might have overlooked some bugs or color settings, so please let me know if you notice anything😻
- 
+
+## 📥 Installation
+
+> **Supported IDEs**: VS Code, VSCodium, Cursor, **Windsurf (Devin Desktop)**, Gitpod, and **Antigravity IDE**.  
+> *(Verified on Devin Desktop v3.3.18 and Antigravity IDE v2.1.1. Note: Standard web-based Antigravity and VS Code's Agent Mode are not supported)*
+
+Choose your editor below to install the theme:
+
+### 🔷 For Official VS Code
+[![VS Code Marketplace](https://img.shields.io/badge/VS_Code-Marketplace-aqua?style=for-the-badge&logo=visualstudiocode&logoColor=000000&labelColor=aqua)](https://marketplace.visualstudio.com/items?itemName=cyber-pinks.cyber-pink-theme)
+
+You can install the theme directly from the **VS Code Marketplace**:
+- Open the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`)
+- Search for `Cyber Pink Theme`
+- Or install via web: **[VS Code Marketplace ↗](https://marketplace.visualstudio.com/items?itemName=cyber-pinks.cyber-pink-theme)**
+
+### 🚀 For Cursor, VSCodium, Windsurf (Devin Desktop), Gitpod, etc.
+[![Open VSX](https://img.shields.io/open-vsx/v/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=eclipse&color=aqua&labelColor=aqua&logoColor=000000&label=Open_VSX_(VSCodium,_Cursor,_Windsurf/Devin))](https://open-vsx.org/extension/cyber-pinks/cyber-pink-theme)
+
+These editors use the **Open VSX Registry**. The theme is fully compatible!
+- Open your editor's Extensions view
+- Search for `Cyber Pink Theme`
+- Or install via web: **[Open VSX Registry ↗](https://open-vsx.org/extension/cyber-pinks/cyber-pink-theme)**
+
+
 ## NAVIGATION
 
 <div style="display:flex; flex-wrap:wrap; gap:1rem;">
@@ -404,7 +426,7 @@ Right-click in any editor and choose **Edit Theme Color at Cursor** to tweak tok
 ---
 
 
-## CHANGE LOG
+## CHANGELOG
 
 A problem recently discovered by the developer
 I tried putting in a badge, but it's making my eyes hurt.😂
@@ -414,7 +436,12 @@ I tried putting in a badge, but it's making my eyes hurt.😂
 [ ![Issues pull REQUEST](https://img.shields.io/github/issues-pr-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/pulls)[ ![closed Issues pr](https://img.shields.io/github/issues-pr-closed-raw/cyber-pinks/cyber-pink-theme?style=for-the-badge&logo=github&color=aqua&labelColor=aqua&logoColor=000000) ](https://github.com/cyber-pinks/cyber-pink-theme/pulls?q=is%3Apr+is%3Aclosed)
 
 
- 
+ ### [0.4.3]
+- **Documentation**: Enhanced README layout by moving previews to the top.
+- **Support**: Explicitly added Open VSX Registry support and badges for VSCodium, Cursor, Windsurf (Devin Desktop), Gitpod, etc. Added verified IDE version notes, and noted that standard web-based Antigravity and VS Code's Agent Mode are not supported.
+- **Design**: Updated badge styles to flat for a cleaner, more minimalist look.
+- **Codebase**: Minor formatting adjustments in `extension.js`.
+
  ### [0.4.2]
 - **Cleanup**: Removed unnecessary image files (themeselect2, theme2) from the project.
 - **Maintenance**: Cleaned up and optimized internal files.
