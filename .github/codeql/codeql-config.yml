@@ -1,0 +1,4 @@
+name: CodeQL configuration
+
+paths-ignore:
+  - semantics-color-mapping/error.ts
